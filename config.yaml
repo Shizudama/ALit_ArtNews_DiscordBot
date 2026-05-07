@@ -32,34 +32,17 @@ rss_feeds:
 keywords:
   # --- 中心テーマ: 低めの閾値 ---
   - { word: "メディアアート", like_threshold: 5, repost_threshold: 2 }
-  - { word: "文学", like_threshold: 15, repost_threshold: 3 }
-  - { word: "文芸", like_threshold: 10, repost_threshold: 2 }
   - { word: "インスタレーション", like_threshold: 5, repost_threshold: 2 }
   - { word: "イマーシブ", like_threshold: 5, repost_threshold: 2 }
+  - { word: "文学", like_threshold: 10, repost_threshold: 2 }
+  - { word: "文芸", like_threshold: 10, repost_threshold: 2 }
 
-  # --- 関連テーマ: 中程度 ---
-  - { word: "小説", like_threshold: 30, repost_threshold: 5 }
-  - { word: "詩", like_threshold: 30, repost_threshold: 5 }
-  - { word: "図書", like_threshold: 20, repost_threshold: 3 }
-  - { word: "演劇", like_threshold: 20, repost_threshold: 3 }
-  - { word: "脚本", like_threshold: 20, repost_threshold: 3 }
+  # --- 関連: 中程度 ---
+  - { word: "小説", like_threshold: 20, repost_threshold: 3 }
+  - { word: "脚本", like_threshold: 15, repost_threshold: 3 }
   - { word: "展示", like_threshold: 20, repost_threshold: 3 }
-  - { word: "ミステリー", like_threshold: 30, repost_threshold: 5 }
+  - { word: "ミステリー", like_threshold: 20, repost_threshold: 3 }
   - { word: "SF", like_threshold: 30, repost_threshold: 5 }
 
-  # --- 技術系 ---
-  - { word: "VRChat", like_threshold: 20, repost_threshold: 3 }
-  - { word: "cluster", like_threshold: 20, repost_threshold: 3 }
-  - { word: "Resonite", like_threshold: 10, repost_threshold: 2 }
-  - { word: "バーチャルリアリティ", like_threshold: 15, repost_threshold: 3 }
-  - { word: "仮想現実", like_threshold: 15, repost_threshold: 3 }
-  - { word: "VR", like_threshold: 50, repost_threshold: 8 }
-  - { word: "AR", like_threshold: 50, repost_threshold: 8 }
-  - { word: "XR", like_threshold: 30, repost_threshold: 5 }
-  - { word: "ロボット", like_threshold: 50, repost_threshold: 8 }
-
-  # --- 一般語: 高めの閾値で本当に話題のものだけ ---
-  - { word: "アート", like_threshold: 100, repost_threshold: 15 }
-  - { word: "アニメ", like_threshold: 200, repost_threshold: 30 }
-  - { word: "AI", like_threshold: 200, repost_threshold: 30 }
-  - { word: "本", like_threshold: 300, repost_threshold: 50 }
+  # --- 単独だと誤爆しやすいので閾値高め ---
+  - { word: "詩", like_threshold: 50, repost_threshold: 8 }
