@@ -31,16 +31,16 @@ rss_feeds:
 
 keywords:
   # --- 中心テーマ: 低めの閾値 ---
-  - { word: "メディアアート", like_threshold: 5, repost_threshold: 2 }
-  - { word: "VRChat", like_threshold: 5, repost_threshold: 2 }
-  - { word: "VR", like_threshold: 5, repost_threshold: 2 }
-  - { word: "AR", like_threshold: 5, repost_threshold: 2 }
-  - { word: "文学", like_threshold: 10, repost_threshold: 2 }
-  - { word: "文芸", like_threshold: 10, repost_threshold: 2 }
+  - { word: "文学", like_threshold: 5, repost_threshold: 2 }
+  - { word: "文芸", like_threshold: 5, repost_threshold: 2 }
+  - { word: "小説", like_threshold: 5, repost_threshold: 2 }
+  - { word: "脚本", like_threshold: 5, repost_threshold: 2 }
+  - { word: "シナリオ", like_threshold: 10, repost_threshold: 2 }
+  - { word: "ノベル", like_threshold: 10, repost_threshold: 2 }
 
   # --- 関連: 中程度 ---
-  - { word: "小説", like_threshold: 20, repost_threshold: 3 }
-  - { word: "脚本", like_threshold: 15, repost_threshold: 3 }
+  - { word: "ノンフィクション", like_threshold: 20, repost_threshold: 3 }
+  - { word: "エッセイ", like_threshold: 15, repost_threshold: 3 }
   - { word: "ホラー", like_threshold: 20, repost_threshold: 3 }
   - { word: "ミステリー", like_threshold: 20, repost_threshold: 3 }
   - { word: "SF", like_threshold: 30, repost_threshold: 5 }
