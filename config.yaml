@@ -1,0 +1,65 @@
+# ===== 動作パラメータ =====
+# 直近何時間分のBluesky投稿を対象とするか(cron間隔よりやや余裕を持たせる)
+lookback_hours: 6
+
+# 1回の実行で送信する最大件数(Discordスパム防止)
+max_posts_per_run: 30
+
+# Bluesky検索の言語指定。日本語のみなら "ja"、全言語なら null。
+bluesky_lang: ja
+
+# ===== RSSフィード =====
+# 信頼できる発信元を中心に。「影響力閾値」の代わりに「情報源の信頼性」で担保する考え方。
+# 必要に応じて追加・削除してください。
+rss_feeds:
+  - https://www.tokyoartbeat.com/feed
+  - https://bijutsutecho.com/feed
+  - https://artscape.jp/rss/index.xml
+  - https://www.cinra.net/feed
+  - https://natalie.mu/stage/feed/news
+  - https://www.shinchosha.co.jp/rss/news.xml
+  - https://www.bunshun.co.jp/rss/all.rss
+  # 例: 個別アーティスト/ライターのブログ、Hatena、note (RSS対応):
+  # - https://note.com/<username>/rss
+
+# ===== キーワード(個別に閾値を設定可能) =====
+# like_threshold: いいね数がこれ以上なら通知
+# repost_threshold: リポスト数がこれ以上なら通知 (どちらか満たせばOK)
+#
+# 一般的すぎる単語(「アート」「AI」「本」など)は閾値を高めにしてノイズを抑える。
+# 中心にしたいキーワード(メディアアート・文学・文芸)は閾値を低くして拾いやすくする。
+
+keywords:
+  # --- 中心テーマ: 低めの閾値 ---
+  - { word: "メディアアート", like_threshold: 5, repost_threshold: 2 }
+  - { word: "文学", like_threshold: 15, repost_threshold: 3 }
+  - { word: "文芸", like_threshold: 10, repost_threshold: 2 }
+  - { word: "インスタレーション", like_threshold: 5, repost_threshold: 2 }
+  - { word: "イマーシブ", like_threshold: 5, repost_threshold: 2 }
+
+  # --- 関連テーマ: 中程度 ---
+  - { word: "小説", like_threshold: 30, repost_threshold: 5 }
+  - { word: "詩", like_threshold: 30, repost_threshold: 5 }
+  - { word: "図書", like_threshold: 20, repost_threshold: 3 }
+  - { word: "演劇", like_threshold: 20, repost_threshold: 3 }
+  - { word: "脚本", like_threshold: 20, repost_threshold: 3 }
+  - { word: "展示", like_threshold: 20, repost_threshold: 3 }
+  - { word: "ミステリー", like_threshold: 30, repost_threshold: 5 }
+  - { word: "SF", like_threshold: 30, repost_threshold: 5 }
+
+  # --- 技術系 ---
+  - { word: "VRChat", like_threshold: 20, repost_threshold: 3 }
+  - { word: "cluster", like_threshold: 20, repost_threshold: 3 }
+  - { word: "Resonite", like_threshold: 10, repost_threshold: 2 }
+  - { word: "バーチャルリアリティ", like_threshold: 15, repost_threshold: 3 }
+  - { word: "仮想現実", like_threshold: 15, repost_threshold: 3 }
+  - { word: "VR", like_threshold: 50, repost_threshold: 8 }
+  - { word: "AR", like_threshold: 50, repost_threshold: 8 }
+  - { word: "XR", like_threshold: 30, repost_threshold: 5 }
+  - { word: "ロボット", like_threshold: 50, repost_threshold: 8 }
+
+  # --- 一般語: 高めの閾値で本当に話題のものだけ ---
+  - { word: "アート", like_threshold: 100, repost_threshold: 15 }
+  - { word: "アニメ", like_threshold: 200, repost_threshold: 30 }
+  - { word: "AI", like_threshold: 200, repost_threshold: 30 }
+  - { word: "本", like_threshold: 300, repost_threshold: 50 }
